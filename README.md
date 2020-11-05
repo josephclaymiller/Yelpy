@@ -21,5 +21,5 @@ Here is a walkthrough of the implemented user stories:
 
 ## Notes
 It was challenging formatting the phone numbers and showing the star ratings. 
-For the phone numbers I created an extenstion to String that takes as imput "+1xxxxxxxxxx" and returns as output "(xxx) xxx-xxxx".
+For the phone numbers I created an extenstion to String that takes a string formatted as "+1xxxxxxxxxx" and returns a string formatted as "(xxx) xxx-xxxx".
 For the star ratings, I created a struct to return the image file name to be used based on a number between 0 and 5 (in increments of 0.5).
