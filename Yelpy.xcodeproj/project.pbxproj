@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD0FDB3B2554458900C0E17B /* RestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0FDB3A2554458900C0E17B /* RestaurantViewModel.swift */; };
 		CD3545F825543396001C8268 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3545F725543396001C8268 /* Restaurant.swift */; };
 		CD3545FD2554373D001C8268 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3545FC2554373D001C8268 /* RestaurantCell.swift */; };
 		CDB3958525541ED9005EB297 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3958425541ED9005EB297 /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		8829BD3DA7FED239AB399C4B /* Pods-Yelpy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yelpy.release.xcconfig"; path = "Target Support Files/Pods-Yelpy/Pods-Yelpy.release.xcconfig"; sourceTree = "<group>"; };
 		BA5BAEC014E262FC4A31DADF /* Pods_Yelpy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yelpy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0FDB3A2554458900C0E17B /* RestaurantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewModel.swift; sourceTree = "<group>"; };
 		CD3545F725543396001C8268 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		CD3545FC2554373D001C8268 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		CDB3958125541ED9005EB297 /* Yelpy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yelpy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				CD3545F725543396001C8268 /* Restaurant.swift */,
+				CD0FDB3A2554458900C0E17B /* RestaurantViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDB3958925541ED9005EB297 /* ViewController.swift in Sources */,
+				CD0FDB3B2554458900C0E17B /* RestaurantViewModel.swift in Sources */,
 				CDB3958525541ED9005EB297 /* AppDelegate.swift in Sources */,
 				CD3545F825543396001C8268 /* Restaurant.swift in Sources */,
 				CDB3958725541ED9005EB297 /* SceneDelegate.swift in Sources */,

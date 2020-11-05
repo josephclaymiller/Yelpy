@@ -40,10 +40,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let restaurant = Restaurant(data: resturantsArray[indexPath.row])
+        let restaurantViewModel = RestaurantViewModel(data: restaurant)
         let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell") as! RestaurantCell
-        cell.nameLabel.text = restaurant.name
-        cell.categoryLabel.text = restaurant.category
-        if let imageUrlStirng = restaurant.imageString {
+        cell.nameLabel.text = restaurantViewModel.name
+        cell.categoryLabel.text = restaurantViewModel.category
+        if let reviews = restaurantViewModel.reviews {
+            cell.reviewsLabel.text = String(reviews)
+        }
+        cell.phoneLabel.text = restaurantViewModel.phone
+        if let imageUrlStirng = restaurantViewModel.imageString {
             let imageUrl = URL(string: imageUrlStirng)
             cell.restaurantImageView.af.setImage(withURL: imageUrl!)
         }
