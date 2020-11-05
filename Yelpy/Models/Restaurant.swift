@@ -18,13 +18,11 @@ struct Restaurant {
     init(data: [String: Any]) {
         name = data["name"] as? String ?? ""
         imageString = data["image_url"] as? String
-        if let categories = data["categories"] as? [[String: String]] ?? [] {
+        if let categories = data["categories"] as? [[String: String]] {
             category = categories[0]["title"] ?? ""
         }
-        // Rating
         reviews = data["review_count"] as! Int
         rating = data["rating"] as! Double
-        // TODO: Format phone number as (###) ###-####
         phone = data["phone"] as? String ?? ""
     }
 }

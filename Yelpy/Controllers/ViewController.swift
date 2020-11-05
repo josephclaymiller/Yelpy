@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -39,8 +40,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let restaurant = Restaurant(data: resturantsArray[indexPath.row])
-        let cell = UITableViewCell()
-        cell.textLabel?.text = restaurant.name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell") as! RestaurantCell
+        cell.nameLabel.text = restaurant.name
+        cell.categoryLabel.text = restaurant.category
+        if let imageUrlStirng = restaurant.imageString {
+            let imageUrl = URL(string: imageUrlStirng)
+            cell.restaurantImageView.af.setImage(withURL: imageUrl!)
+        }
         return cell
     }
     
