@@ -20,7 +20,7 @@ struct RestaurantViewModel {
     init(data: Restaurant) {
         name = data.name ?? ""
         category = data.category ?? ""
-        phone = data.phone?.formatPhoneNumber()
+        phone = (data.phone != nil) ? data.phone!.formatPhoneNumber() : ""
         imageString = data.imageString ?? ""
         rating = (data.rating != nil) ? String(data.rating!) : ""
         reviews = (data.reviews != nil) ? String(data.reviews!) : ""
