@@ -94,6 +94,7 @@
                                             <outlet property="phoneLabel" destination="bmi-i6-N7n" id="FSV-5h-uEn"/>
                                             <outlet property="restaurantImageView" destination="34k-AJ-qoU" id="iJd-DR-E11"/>
                                             <outlet property="reviewsLabel" destination="Qz8-RV-4Sc" id="jIK-sA-6le"/>
+                                            <outlet property="starsImageView" destination="Ny7-QR-ezA" id="PjL-yi-B3q"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

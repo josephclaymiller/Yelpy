@@ -52,6 +52,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let imageUrl = URL(string: imageUrlStirng)
             cell.restaurantImageView.af.setImage(withURL: imageUrl!)
         }
+        cell.starsImageView.image = UIImage(named: restaurantViewModel.starImageName)
         return cell
     }
     

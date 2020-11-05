@@ -8,12 +8,14 @@
 import Foundation
 
 struct RestaurantViewModel {
+    
     var name: String!
     var category: String!
     var phone: String!
     var imageString: String!
     var rating: String!
     var reviews: String!
+    var starImageName: String!
     
     init(data: Restaurant) {
         name = data.name ?? ""
@@ -22,8 +24,37 @@ struct RestaurantViewModel {
         imageString = data.imageString ?? ""
         rating = (data.rating != nil) ? String(data.rating!) : ""
         reviews = (data.reviews != nil) ? String(data.reviews!) : ""
+        starImageName = Stars.imageName[data.rating ?? 0]
     }
 
+}
+
+struct Stars {
+    
+    static let imageName = [
+        0: Stars.zero,
+        1: Stars.one,
+        1.5: Stars.oneHalf,
+        2: Stars.two,
+        2.5: Stars.twoHalf,
+        3: Stars.three,
+        3.5: Stars.threeHalf,
+        4: Stars.four,
+        4.5: Stars.fourHalf,
+        5: Stars.five
+    ]
+    
+    static let zero = "regular_0"
+    static let one = "regular_1"
+    static let oneHalf = "regular_1_half"
+    static let two = "regular_2"
+    static let twoHalf = "regular_2_half"
+    static let three = "regular_3"
+    static let threeHalf = "regular_3_half"
+    static let four = "regular_4"
+    static let fourHalf = "regular_4_half"
+    static let five = "regular_5"
+    
 }
 
 extension String {
