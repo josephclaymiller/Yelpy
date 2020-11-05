@@ -7,11 +7,11 @@ The following functionality is completed:
 
 - [x] User can view a list of restaurants in SF
 - [x] User can view the name of each restaurant
-- [x] User can view image of each restaurant
-- [x] User can view category of each restaurant
-- [x] User can view rating of each restaurant
-- [x] User can view number of reviews of each restaurant
-- [x] User can view phone number of each restaurant
+- [x] User can view an image of each restaurant
+- [x] User can view the category of each restaurant
+- [x] User can view the rating of each restaurant
+- [x] User can view the number of reviews of each restaurant
+- [x] User can view the phone number of each restaurant
 
 ## Video Walkthrough
 
