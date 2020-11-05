@@ -6,12 +6,12 @@ An app that allows users to view Yelp restaurants
 The following functionality is completed:
 
 - [x] User can view a list of restaurants in SF
-- [x] User can view name of each restaurant
+- [x] User can view the name of each restaurant
 - [x] User can view image of each restaurant
 - [x] User can view category of each restaurant
 - [x] User can view rating of each restaurant
 - [x] User can view number of reviews of each restaurant
-- [x] User can view phone numbers of each restaurant
+- [x] User can view phone number of each restaurant
 
 ## Video Walkthrough
 
