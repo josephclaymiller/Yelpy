@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD3545F825543396001C8268 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3545F725543396001C8268 /* Restaurant.swift */; };
 		CDB3958525541ED9005EB297 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3958425541ED9005EB297 /* AppDelegate.swift */; };
 		CDB3958725541ED9005EB297 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3958625541ED9005EB297 /* SceneDelegate.swift */; };
 		CDB3958925541ED9005EB297 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3958825541ED9005EB297 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		8829BD3DA7FED239AB399C4B /* Pods-Yelpy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yelpy.release.xcconfig"; path = "Target Support Files/Pods-Yelpy/Pods-Yelpy.release.xcconfig"; sourceTree = "<group>"; };
 		BA5BAEC014E262FC4A31DADF /* Pods_Yelpy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yelpy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD3545F725543396001C8268 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		CDB3958125541ED9005EB297 /* Yelpy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yelpy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB3958425541ED9005EB297 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDB3958625541ED9005EB297 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		CDB395C82554257B005EB297 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CD3545F725543396001C8268 /* Restaurant.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 			files = (
 				CDB3958925541ED9005EB297 /* ViewController.swift in Sources */,
 				CDB3958525541ED9005EB297 /* AppDelegate.swift in Sources */,
+				CD3545F825543396001C8268 /* Restaurant.swift in Sources */,
 				CDB3958725541ED9005EB297 /* SceneDelegate.swift in Sources */,
 				CDB395C1255424FF005EB297 /* Constants.swift in Sources */,
 				CDB395D12554261D005EB297 /* API.swift in Sources */,
