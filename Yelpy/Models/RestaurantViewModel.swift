@@ -20,11 +20,27 @@ struct RestaurantViewModel {
     init(data: Restaurant) {
         name = data.name ?? ""
         category = data.category ?? ""
-        phone = (data.phone != nil) ? data.phone!.formatPhoneNumber() : ""
         imageString = data.imageString ?? ""
         rating = (data.rating != nil) ? String(data.rating!) : ""
         reviews = (data.reviews != nil) ? String(data.reviews!) : ""
         starImageName = Stars.imageName[data.rating ?? 0]
+        
+        if let phoneNumber = data.phone {
+            phone = ""
+            do {
+                try phone = phoneNumber.formatPhoneNumber()
+            } catch PhoneNumberError.noNumber {
+                print("Missing phone number")
+            } catch PhoneNumberError.numberTooLong(let extraDigits) {
+                print("Phone number is \(extraDigits) characters too long")
+            } catch PhoneNumberError.numberTooShorts(let digitsNeeded) {
+                print("Phone number is \(digitsNeeded) characters too short")
+            } catch {
+                print("Unexpected error: \(error).")
+            }
+            
+        }
+        
     }
 
 }
@@ -57,10 +73,26 @@ struct Stars {
     
 }
 
+enum PhoneNumberError: Error {
+    case numberTooLong(extraDigits: Int)
+    case numberTooShorts(digitsNeeded: Int)
+    case noNumber
+}
+
 extension String {
     // Input: phone number formatted as "+1xxxxxxxxxx"
     // Output: phone number formatted as "(xxx) xxx-xxxx"
-    func formatPhoneNumber() -> String {
+    func formatPhoneNumber() throws -> String {
+        let phoneNumberLength = 12
+        guard self.count == phoneNumberLength else {
+            if (self.count == 0) {
+                throw PhoneNumberError.noNumber
+            } else if (self.count > phoneNumberLength) {
+                throw PhoneNumberError.numberTooLong(extraDigits: (self.count - phoneNumberLength))
+            } else {
+                throw PhoneNumberError.numberTooShorts(digitsNeeded: (phoneNumberLength - self.count))
+            }
+        }
         // Area Code
         var start = self.index(self.startIndex, offsetBy: 2)
         var end = self.index(self.endIndex, offsetBy: -7)
