@@ -1,5 +1,5 @@
 # Yelpy
-An app that allows users to view Yelp restaurants
+An iPhone app that allows users to view Yelp restaurants.
 
 ## User Stories
 
@@ -21,5 +21,5 @@ Here is a walkthrough of the implemented user stories:
 
 ## Notes
 It was challenging formatting the phone numbers and showing the star ratings. 
-For the phone numbers I created an extenstion to String that takes a string formatted as "+1xxxxxxxxxx" and returns a string formatted as "(xxx) xxx-xxxx". I added error handling to ensure the string is 12 characters before being formatted.
-For the star ratings, I created a struct to return the image file name to be used based on a number between 0 and 5 (in increments of 0.5).
+For the phone numbers I extended String with a method `formatPhoneNumber() throws -> String` that is called on a string formatted as "+1xxxxxxxxxx" to return a string formatted as "(xxx) xxx-xxxx". It throws an error if the string is not 12 characters.
+For the star ratings, I created a struct called `Stars` that has a dictionary `imageName` of image file names with the keys the numbers 0 through 5 (in increments of 0.5).
